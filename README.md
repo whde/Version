@@ -14,8 +14,8 @@ VersionManage *manager = [[VersionManage alloc] init];
 ```
 
 PS:AlertView推荐使用https://github.com/whde/Alert
-   这个Alert兼容iOS7以上
-   支持居左/居中/居右对齐
-   同时支持设置行间距
-   使用方式和UIAlertView一样
-   Alert同时还支持Block形式
+   - 这个Alert兼容iOS7以上
+   - 支持居左/居中/居右对齐
+   - 同时支持设置行间距
+   - 使用方式和UIAlertView一样
+   - Alert同时还支持Block形式
