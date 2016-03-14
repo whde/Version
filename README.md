@@ -9,7 +9,7 @@ iOS软件检查更新,每次启动检测Appstore是否有更新,每一次更新�
 - 写入代码
 ```objective-c
 VersionManage *manager = [[VersionManage alloc] init];
-    [manager checkVerSionWithCallBack:^{
+[manager checkVerSionWithCallBack:^{
 }];
 ```
 
