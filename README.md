@@ -20,4 +20,5 @@ AlertView推荐使用https://github.com/whde/Alert
    - 同时支持设置行间距
    - 使用方式和UIAlertView一样
    - Alert同时还支持Block形式
+   _ 
 ![效果图](https://raw.githubusercontent.com/whde/Version/master/Version/Simulator%20Screen%20Shot%202016年3月15日%20上午11.09.25.png)
