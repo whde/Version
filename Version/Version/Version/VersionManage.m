@@ -50,7 +50,7 @@ NSString * const VSERSIONMANAGER = @"VersionManager";
             [[NSUserDefaults standardUserDefaults] setValue:versionManagerDic forKey:VSERSIONMANAGER];
             [[NSUserDefaults standardUserDefaults] synchronize];
         }
-        NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"http://itunes.apple.com/lookup?id=%@",AppStore_ID]];
+        NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"http://itunes.apple.com/cn/lookup?id=%@",AppStore_ID]];
         NSURLRequest *request = [NSURLRequest requestWithURL:URL];
         NSURLSessionDataTask *dataTask = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
             if (error) {
