@@ -8,7 +8,7 @@
 
 #import "VersionManage.h"
 #import <StoreKit/StoreKit.h>
-#import <Alert/Alert.h>
+//#import <Alert/Alert.h>
 #define IS_VAILABLE_IOS8  ([[[UIDevice currentDevice] systemVersion] intValue] >= 8)
 NSString * const VSERSION = @"Version";
 NSString * const VSERSIONMANAGER = @"VersionManager";
@@ -83,46 +83,48 @@ NSString * const VSERSIONMANAGER = @"VersionManager";
                             [[NSUserDefaults standardUserDefaults] setValue:versionManagerDic forKey:VSERSIONMANAGER];
                             [[NSUserDefaults standardUserDefaults] synchronize];
                             dispatch_async(dispatch_get_main_queue(), ^{
-                                Alert *alert = [[Alert alloc] initWithTitle:@"有新版本更新" message:[NSString stringWithFormat:@"更新内容:\n%@", releaseInfo[@"releaseNotes"]] delegate:nil cancelButtonTitle:@"关闭" otherButtonTitles:@"更新", nil];
-                                [alert setContentAlignment:NSTextAlignmentLeft];
-                                [alert setLineSpacing:5];
-                                [alert setCancelBlock:^(Alert *alertView) {
-                                    /*关闭*/
-                                    dispatch_async(dispatch_get_main_queue(), ^{
-                                        callBackBlock_();
-                                    });
-                                }];
-                                [alert setClickBlock:^(Alert *alertView, NSInteger buttonIndex) {
-                                    /*更新*/
-                                    [self openAppWithIdentifier];
-                                }];
-                                [alert show];
-                                //                                if (IS_VAILABLE_IOS8) {
-                                //                                    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"有新版本更新" message:[NSString stringWithFormat:@"更新内容:\n%@", releaseInfo[@"releaseNotes"]] preferredStyle:UIAlertControllerStyleAlert];
-                                //                                    [alert addAction:[UIAlertAction actionWithTitle:@"关闭" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                                //                                        /*关闭*/
-                                //                                        dispatch_async(dispatch_get_main_queue(), ^{
-                                //                                            callBackBlock_();
-                                //                                        });
-                                //                                    }]];
-                                //                                    [alert addAction:[UIAlertAction actionWithTitle:@"更新" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                                //                                        /*更新*/
-                                //                                        [self openAppWithIdentifier];
-                                //                                    }]];
-                                //                                    UIWindow *window = nil;
-                                //                                    id<UIApplicationDelegate> delegate = [[UIApplication sharedApplication] delegate];
-                                //                                    if ([delegate respondsToSelector:@selector(window)]) {
-                                //                                        window = [delegate performSelector:@selector(window)];
-                                //                                    } else {
-                                //                                        window = [[UIApplication sharedApplication] keyWindow];
-                                //                                    }
-                                //                                    [window.rootViewController presentViewController:alert animated:YES completion:nil];
-                                //                                } else {
-                                //#if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_8_0
-                                //                                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"有新版本更新" message:[NSString stringWithFormat:@"更新内容:\n%@", releaseInfo[@"releaseNotes"]] delegate:self cancelButtonTitle:@"关闭" otherButtonTitles:@"更新", nil];
-                                //                                    [alert show];
-                                //#endif
-                                //                                }
+                                
+                                // https://github.com/whde/Alert
+                                // Alert *alert = [[Alert alloc] initWithTitle:@"有新版本更新" message:[NSString stringWithFormat:@"更新内容:\n%@", releaseInfo[@"releaseNotes"]] delegate:nil cancelButtonTitle:@"关闭" otherButtonTitles:@"更新", nil];
+                                // [alert setContentAlignment:NSTextAlignmentLeft];
+                                // [alert setLineSpacing:5];
+                                // [alert setCancelBlock:^(Alert *alertView) {
+                                // /*关闭*/
+                                // dispatch_async(dispatch_get_main_queue(), ^{
+                                // callBackBlock_();
+                                // });
+                                // }];
+                                // [alert setClickBlock:^(Alert *alertView, NSInteger buttonIndex) {
+                                // /*更新*/
+                                // [self openAppWithIdentifier];
+                                // }];
+                                // [alert show];
+                                if (IS_VAILABLE_IOS8) {
+                                    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"有新版本更新" message:[NSString stringWithFormat:@"更新内容:\n%@", releaseInfo[@"releaseNotes"]] preferredStyle:UIAlertControllerStyleAlert];
+                                    [alert addAction:[UIAlertAction actionWithTitle:@"关闭" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                                        /*关闭*/
+                                        dispatch_async(dispatch_get_main_queue(), ^{
+                                            callBackBlock_();
+                                        });
+                                    }]];
+                                    [alert addAction:[UIAlertAction actionWithTitle:@"更新" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                                        /*更新*/
+                                        [self openAppWithIdentifier];
+                                    }]];
+                                    UIWindow *window = nil;
+                                    id<UIApplicationDelegate> delegate = [[UIApplication sharedApplication] delegate];
+                                    if ([delegate respondsToSelector:@selector(window)]) {
+                                        window = [delegate performSelector:@selector(window)];
+                                    } else {
+                                        window = [[UIApplication sharedApplication] keyWindow];
+                                    }
+                                    [window.rootViewController presentViewController:alert animated:YES completion:nil];
+                                } else {
+#if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_8_0
+                                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"有新版本更新" message:[NSString stringWithFormat:@"更新内容:\n%@", releaseInfo[@"releaseNotes"]] delegate:self cancelButtonTitle:@"关闭" otherButtonTitles:@"更新", nil];
+                                    [alert show];
+#endif
+                                }
                             });
                             return;
                         }else if ([[appstoreVersionAry objectAtIndex:i] intValue]<[[currentVersionAry objectAtIndex:i] intValue]){
