@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
 #
 
 s.name         = "WhdeVersion"
-s.version      = "1.0.0"
-s.summary      = "Objective-C断点续传"
+s.version      = "1.0.1"
+s.summary      = "Objective-C检测版本"
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,7 +25,7 @@ s.summary      = "Objective-C断点续传"
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 s.description  = <<-DESC
-Swift实现断点续传,Demo简单易懂,没有太多复杂模块和逻辑,完整体现断点续传的原理
+Objective-C检测版本,简单实用
 DESC
 
 s.homepage     = "https://github.com/whde/Version"
