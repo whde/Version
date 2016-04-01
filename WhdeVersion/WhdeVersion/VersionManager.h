@@ -16,13 +16,8 @@
  VersionManage_3.0.4为VersionManager+当前App版本号,作用是:能够在第一次清除以前版本的记录的数据,避免重复提示
  */
 
+
 #import <Foundation/Foundation.h>
-#define AppStore_ID @"444934666"
-@interface VersionManage : NSObject 
-typedef void (^CallBackBlock)();
-/**
- *   showAlert 设置中主动触发版本更新，
- *  @param callBackBlock 检查完毕后可能需要做的处理
- */
-- (void)checkVerSionWithCallBack:(CallBackBlock)callBackBlock;
+@interface VersionManager : NSObject
++ (void)checkVerSion;
 @end

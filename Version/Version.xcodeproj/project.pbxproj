@@ -7,15 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F838FB851C97B666009FB070 /* Alert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F838FB841C97B666009FB070 /* Alert.framework */; };
-		F838FB861C97B666009FB070 /* Alert.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F838FB841C97B666009FB070 /* Alert.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F80481751CACFE6300E64488 /* Alert.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F80481721CACFE5900E64488 /* Alert.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F8E0D2331C92F928005FC73E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8E0D2321C92F928005FC73E /* main.m */; };
 		F8E0D2361C92F928005FC73E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8E0D2351C92F928005FC73E /* AppDelegate.m */; };
 		F8E0D2391C92F928005FC73E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8E0D2381C92F928005FC73E /* ViewController.m */; };
 		F8E0D23C1C92F928005FC73E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8E0D23A1C92F928005FC73E /* Main.storyboard */; };
 		F8E0D23E1C92F928005FC73E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8E0D23D1C92F928005FC73E /* Assets.xcassets */; };
 		F8E0D2411C92F928005FC73E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8E0D23F1C92F928005FC73E /* LaunchScreen.storyboard */; };
-		F8E0D24B1C92F940005FC73E /* VersionManage.m in Sources */ = {isa = PBXBuildFile; fileRef = F8E0D24A1C92F940005FC73E /* VersionManage.m */; };
+		F8E0D24B1C92F940005FC73E /* VersionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F8E0D24A1C92F940005FC73E /* VersionManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,7 +24,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F838FB861C97B666009FB070 /* Alert.framework in Embed Frameworks */,
+				F80481751CACFE6300E64488 /* Alert.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -33,7 +32,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F838FB841C97B666009FB070 /* Alert.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alert.framework; path = Version/Alert.framework; sourceTree = "<group>"; };
+		F80481721CACFE5900E64488 /* Alert.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alert.framework; path = Version/Alert.framework; sourceTree = "<group>"; };
 		F8E0D22E1C92F928005FC73E /* Version.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Version.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8E0D2321C92F928005FC73E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F8E0D2341C92F928005FC73E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -44,8 +43,8 @@
 		F8E0D23D1C92F928005FC73E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8E0D2401C92F928005FC73E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8E0D2421C92F928005FC73E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8E0D2491C92F940005FC73E /* VersionManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VersionManage.h; sourceTree = "<group>"; };
-		F8E0D24A1C92F940005FC73E /* VersionManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VersionManage.m; sourceTree = "<group>"; };
+		F8E0D2491C92F940005FC73E /* VersionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VersionManager.h; sourceTree = "<group>"; };
+		F8E0D24A1C92F940005FC73E /* VersionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VersionManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +52,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F838FB851C97B666009FB070 /* Alert.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,7 +61,7 @@
 		F8E0D2251C92F928005FC73E = {
 			isa = PBXGroup;
 			children = (
-				F838FB841C97B666009FB070 /* Alert.framework */,
+				F80481721CACFE5900E64488 /* Alert.framework */,
 				F8E0D2301C92F928005FC73E /* Version */,
 				F8E0D22F1C92F928005FC73E /* Products */,
 			);
@@ -105,8 +103,8 @@
 		F8E0D2481C92F940005FC73E /* Version */ = {
 			isa = PBXGroup;
 			children = (
-				F8E0D2491C92F940005FC73E /* VersionManage.h */,
-				F8E0D24A1C92F940005FC73E /* VersionManage.m */,
+				F8E0D2491C92F940005FC73E /* VersionManager.h */,
+				F8E0D24A1C92F940005FC73E /* VersionManager.m */,
 			);
 			path = Version;
 			sourceTree = "<group>";
@@ -183,7 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8E0D2391C92F928005FC73E /* ViewController.m in Sources */,
-				F8E0D24B1C92F940005FC73E /* VersionManage.m in Sources */,
+				F8E0D24B1C92F940005FC73E /* VersionManager.m in Sources */,
 				F8E0D2361C92F928005FC73E /* AppDelegate.m in Sources */,
 				F8E0D2331C92F928005FC73E /* main.m in Sources */,
 			);
@@ -303,9 +301,9 @@
 					"$(PROJECT_DIR)/Version",
 				);
 				INFOPLIST_FILE = Version/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ziyoubang.Version;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ziyoubang.eCarryiPhone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -320,9 +318,9 @@
 					"$(PROJECT_DIR)/Version",
 				);
 				INFOPLIST_FILE = Version/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ziyoubang.Version;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ziyoubang.eCarryiPhone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

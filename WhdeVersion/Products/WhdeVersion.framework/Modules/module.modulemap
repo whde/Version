@@ -1,0 +1,6 @@
+framework module WhdeVersion {
+  umbrella header "WhdeVersion.h"
+
+  export *
+  module * { export * }
+}

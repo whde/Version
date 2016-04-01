@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "VersionManage.h"
 @interface ViewController ()
 
 @end
