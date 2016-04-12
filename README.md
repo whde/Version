@@ -1,8 +1,8 @@
 iOS软件检查更新,每次启动检测Appstore是否有更新,每一次更新只提醒一次
 # Version 1.0.2
-1.无需填写AppStoreID即可查询
-2.一句话简单整合版本更新
-3.添加了https://github.com/whde/Alert 的Framework, 无需改动即可使用Alert弹出框提示
+- 无需填写AppStoreID即可查询
+- 一句话简单整合版本更新
+- 添加了https://github.com/whde/Alert 的Framework, 无需改动即可使用Alert弹出框提示
 ```objective-c
 pod 'WhdeVersion', '~> 1.0.2'
 ```
