@@ -20,7 +20,7 @@ pod 'WhdeVersion', '~> 1.0.2'
 #PS:
 AlertView推荐使用https://github.com/whde/Alert
 ```objective-c
-pod 'Alert', '~> 1.0.2'
+pod 'Alert', '~> 1.0.3'
 ```
    - 这个Alert兼容iOS7以上
    - 支持居左/居中/居右对齐
