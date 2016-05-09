@@ -8,8 +8,8 @@
 
 #import "VersionManager.h"
 #import <StoreKit/StoreKit.h>
-#if __has_include(<Alert/Alert.h>)
-#import <Alert/Alert.h>
+#if  __has_include(<Alert.h>)
+#import "Alert.h"
 #endif
 #define IS_VAILABLE_IOS8  ([[[UIDevice currentDevice] systemVersion] intValue] >= 8)
 NSString * const VSERSION = @"Version";
@@ -102,7 +102,7 @@ static VersionManager *manager = nil;
                             [[NSUserDefaults standardUserDefaults] setValue:versionManagerDic forKey:VSERSIONMANAGER];
                             [[NSUserDefaults standardUserDefaults] synchronize];
                             dispatch_async(dispatch_get_main_queue(), ^{
-#if __has_include(<Alert/Alert.h>)
+#if __has_include(<Alert.h>)
                                 // https://github.com/whde/Alert
                                 Alert *alert = [[Alert alloc] initWithTitle:@"有新版本更新" message:[NSString stringWithFormat:@"更新内容:\n%@", releaseInfo[@"releaseNotes"]] delegate:nil cancelButtonTitle:@"关闭" otherButtonTitles:@"更新", nil];
                                 [alert setContentAlignment:NSTextAlignmentLeft];

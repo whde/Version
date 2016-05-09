@@ -24,7 +24,9 @@
 		F80481621CACF0C900E64488 /* WhdeVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = F80481611CACF0C900E64488 /* WhdeVersion.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F804816B1CACF0E600E64488 /* VersionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F80481691CACF0E600E64488 /* VersionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F804816C1CACF0E600E64488 /* VersionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F804816A1CACF0E600E64488 /* VersionManager.m */; };
-		F8DC16901CAE0ED000B950D9 /* Alert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8DC168F1CAE0ED000B950D9 /* Alert.framework */; };
+		F8467EED1CE029DE00A5CEE9 /* Alert.h in Headers */ = {isa = PBXBuildFile; fileRef = F8467EEA1CE029DE00A5CEE9 /* Alert.h */; };
+		F8467EEE1CE029DE00A5CEE9 /* Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = F8467EEB1CE029DE00A5CEE9 /* Alert.m */; };
+		F8467EEF1CE029DE00A5CEE9 /* s.png in Resources */ = {isa = PBXBuildFile; fileRef = F8467EEC1CE029DE00A5CEE9 /* s.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +35,9 @@
 		F80481631CACF0C900E64488 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F80481691CACF0E600E64488 /* VersionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VersionManager.h; sourceTree = "<group>"; };
 		F804816A1CACF0E600E64488 /* VersionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VersionManager.m; sourceTree = "<group>"; };
-		F8DC168F1CAE0ED000B950D9 /* Alert.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alert.framework; path = WhdeVersion/Alert.framework; sourceTree = "<group>"; };
+		F8467EEA1CE029DE00A5CEE9 /* Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alert.h; sourceTree = "<group>"; };
+		F8467EEB1CE029DE00A5CEE9 /* Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alert.m; sourceTree = "<group>"; };
+		F8467EEC1CE029DE00A5CEE9 /* s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +45,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8DC16901CAE0ED000B950D9 /* Alert.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,7 +54,7 @@
 		F80481541CACF0C900E64488 = {
 			isa = PBXGroup;
 			children = (
-				F8DC168F1CAE0ED000B950D9 /* Alert.framework */,
+				F8467EE91CE029DE00A5CEE9 /* AlertView */,
 				F80481601CACF0C900E64488 /* WhdeVersion */,
 				F804815F1CACF0C900E64488 /* Products */,
 			);
@@ -76,6 +79,17 @@
 			path = WhdeVersion;
 			sourceTree = "<group>";
 		};
+		F8467EE91CE029DE00A5CEE9 /* AlertView */ = {
+			isa = PBXGroup;
+			children = (
+				F8467EEA1CE029DE00A5CEE9 /* Alert.h */,
+				F8467EEB1CE029DE00A5CEE9 /* Alert.m */,
+				F8467EEC1CE029DE00A5CEE9 /* s.png */,
+			);
+			name = AlertView;
+			path = ../AlertView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -83,6 +97,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8467EED1CE029DE00A5CEE9 /* Alert.h in Headers */,
 				F804816B1CACF0E600E64488 /* VersionManager.h in Headers */,
 				F80481621CACF0C900E64488 /* WhdeVersion.h in Headers */,
 			);
@@ -149,6 +164,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8467EEF1CE029DE00A5CEE9 /* s.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8467EEE1CE029DE00A5CEE9 /* Alert.m in Sources */,
 				F804816C1CACF0E600E64488 /* VersionManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

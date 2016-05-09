@@ -7,14 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F80481751CACFE6300E64488 /* Alert.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F80481721CACFE5900E64488 /* Alert.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F8467EF41CE02A0C00A5CEE9 /* Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = F8467EF21CE02A0C00A5CEE9 /* Alert.m */; };
+		F8467EF51CE02A0C00A5CEE9 /* s.png in Resources */ = {isa = PBXBuildFile; fileRef = F8467EF31CE02A0C00A5CEE9 /* s.png */; };
+		F8467EFB1CE02A1A00A5CEE9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F8467EF71CE02A1A00A5CEE9 /* Info.plist */; };
+		F8467EFC1CE02A1A00A5CEE9 /* VersionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F8467EF91CE02A1A00A5CEE9 /* VersionManager.m */; };
 		F8E0D2331C92F928005FC73E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8E0D2321C92F928005FC73E /* main.m */; };
 		F8E0D2361C92F928005FC73E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8E0D2351C92F928005FC73E /* AppDelegate.m */; };
 		F8E0D2391C92F928005FC73E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8E0D2381C92F928005FC73E /* ViewController.m */; };
 		F8E0D23C1C92F928005FC73E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8E0D23A1C92F928005FC73E /* Main.storyboard */; };
 		F8E0D23E1C92F928005FC73E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8E0D23D1C92F928005FC73E /* Assets.xcassets */; };
 		F8E0D2411C92F928005FC73E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8E0D23F1C92F928005FC73E /* LaunchScreen.storyboard */; };
-		F8E0D24B1C92F940005FC73E /* VersionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F8E0D24A1C92F940005FC73E /* VersionManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +26,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F80481751CACFE6300E64488 /* Alert.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -32,7 +33,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F80481721CACFE5900E64488 /* Alert.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alert.framework; path = Version/Alert.framework; sourceTree = "<group>"; };
+		F8467EF11CE02A0C00A5CEE9 /* Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alert.h; sourceTree = "<group>"; };
+		F8467EF21CE02A0C00A5CEE9 /* Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alert.m; sourceTree = "<group>"; };
+		F8467EF31CE02A0C00A5CEE9 /* s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s.png; sourceTree = "<group>"; };
+		F8467EF71CE02A1A00A5CEE9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8467EF81CE02A1A00A5CEE9 /* VersionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VersionManager.h; sourceTree = "<group>"; };
+		F8467EF91CE02A1A00A5CEE9 /* VersionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VersionManager.m; sourceTree = "<group>"; };
+		F8467EFA1CE02A1A00A5CEE9 /* WhdeVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhdeVersion.h; sourceTree = "<group>"; };
 		F8E0D22E1C92F928005FC73E /* Version.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Version.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8E0D2321C92F928005FC73E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F8E0D2341C92F928005FC73E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -43,8 +50,6 @@
 		F8E0D23D1C92F928005FC73E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8E0D2401C92F928005FC73E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8E0D2421C92F928005FC73E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8E0D2491C92F940005FC73E /* VersionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VersionManager.h; sourceTree = "<group>"; };
-		F8E0D24A1C92F940005FC73E /* VersionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VersionManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +63,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F8467EF01CE02A0C00A5CEE9 /* AlertView */ = {
+			isa = PBXGroup;
+			children = (
+				F8467EF11CE02A0C00A5CEE9 /* Alert.h */,
+				F8467EF21CE02A0C00A5CEE9 /* Alert.m */,
+				F8467EF31CE02A0C00A5CEE9 /* s.png */,
+			);
+			name = AlertView;
+			path = ../AlertView;
+			sourceTree = "<group>";
+		};
+		F8467EF61CE02A1A00A5CEE9 /* WhdeVersion */ = {
+			isa = PBXGroup;
+			children = (
+				F8467EF71CE02A1A00A5CEE9 /* Info.plist */,
+				F8467EF81CE02A1A00A5CEE9 /* VersionManager.h */,
+				F8467EF91CE02A1A00A5CEE9 /* VersionManager.m */,
+				F8467EFA1CE02A1A00A5CEE9 /* WhdeVersion.h */,
+			);
+			name = WhdeVersion;
+			path = ../WhdeVersion/WhdeVersion;
+			sourceTree = "<group>";
+		};
 		F8E0D2251C92F928005FC73E = {
 			isa = PBXGroup;
 			children = (
-				F80481721CACFE5900E64488 /* Alert.framework */,
+				F8467EF61CE02A1A00A5CEE9 /* WhdeVersion */,
+				F8467EF01CE02A0C00A5CEE9 /* AlertView */,
 				F8E0D2301C92F928005FC73E /* Version */,
 				F8E0D22F1C92F928005FC73E /* Products */,
 			);
@@ -78,7 +107,6 @@
 		F8E0D2301C92F928005FC73E /* Version */ = {
 			isa = PBXGroup;
 			children = (
-				F8E0D2481C92F940005FC73E /* Version */,
 				F8E0D2341C92F928005FC73E /* AppDelegate.h */,
 				F8E0D2351C92F928005FC73E /* AppDelegate.m */,
 				F8E0D2371C92F928005FC73E /* ViewController.h */,
@@ -98,15 +126,6 @@
 				F8E0D2321C92F928005FC73E /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		F8E0D2481C92F940005FC73E /* Version */ = {
-			isa = PBXGroup;
-			children = (
-				F8E0D2491C92F940005FC73E /* VersionManager.h */,
-				F8E0D24A1C92F940005FC73E /* VersionManager.m */,
-			);
-			path = Version;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +189,8 @@
 				F8E0D2411C92F928005FC73E /* LaunchScreen.storyboard in Resources */,
 				F8E0D23E1C92F928005FC73E /* Assets.xcassets in Resources */,
 				F8E0D23C1C92F928005FC73E /* Main.storyboard in Resources */,
+				F8467EFB1CE02A1A00A5CEE9 /* Info.plist in Resources */,
+				F8467EF51CE02A0C00A5CEE9 /* s.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,8 +202,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8E0D2391C92F928005FC73E /* ViewController.m in Sources */,
-				F8E0D24B1C92F940005FC73E /* VersionManager.m in Sources */,
 				F8E0D2361C92F928005FC73E /* AppDelegate.m in Sources */,
+				F8467EFC1CE02A1A00A5CEE9 /* VersionManager.m in Sources */,
+				F8467EF41CE02A0C00A5CEE9 /* Alert.m in Sources */,
 				F8E0D2331C92F928005FC73E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
