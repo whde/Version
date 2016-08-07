@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+      linkedme.init("linkedme_key", null, null);
+      linkedme.link(null, function(err, data, false){
+        if(err){
+          // 生成深度链接失败，返回错误对象err
+        } else {
+          /* 
+            生成深度链接成功，深度链接可以通过data.url得到，
+            将深度链接绑定到<a>标签，这样当用户点击这
+            个深度链接，如果是在pc上，那么跳转到深度链接二维
+            码页面，用户用手机扫描该二维码就会打开app；如果
+            在移动端，深度链接直接会根据手机设备类型打开ios
+            或者安卓app 
+           */
+          document.body.innerHTML += '<a href="'+data.url+'">LinkedME深度链接</a>'
+        }
+      });
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
