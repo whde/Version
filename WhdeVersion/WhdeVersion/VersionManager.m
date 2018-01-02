@@ -11,6 +11,17 @@
 #if  __has_include(<Alert.h>)
 #import "Alert.h"
 #endif
+#define weakify(...) \\
+    autoreleasepool {} \\
+    metamacro_foreach_cxt(rac_weakify_,, __weak, __VA_ARGS__)
+
+#define strongify(...) \\
+    try {} @finally {} \\
+    _Pragma("clang diagnostic push") \\
+    _Pragma("clang diagnostic ignored \\"-Wshadow\\"") \\
+    metamacro_foreach(rac_strongify_,, __VA_ARGS__) \\
+    _Pragma("clang diagnostic pop")
+
 #define IS_VAILABLE_IOS8  ([[[UIDevice currentDevice] systemVersion] intValue] >= 8)
 NSString * const VSERSION = @"Version";
 NSString * const VSERSIONMANAGER = @"VersionManager";
@@ -107,7 +118,9 @@ static VersionManager *manager = nil;
                                 Alert *alert = [[Alert alloc] initWithTitle:@"有新版本更新" message:[NSString stringWithFormat:@"更新内容:\n%@", releaseInfo[@"releaseNotes"]] delegate:nil cancelButtonTitle:@"关闭" otherButtonTitles:@"更新", nil];
                                 [alert setContentAlignment:NSTextAlignmentLeft];
                                 [alert setLineSpacing:5];
+                                @weakify(self)
                                 [alert setClickBlock:^(Alert *alertView, NSInteger buttonIndex) {
+                                    @strongify(self)
                                     if (buttonIndex == 0) {
                                         manager = nil;
                                     } else {
