@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 #
 
 s.name         = "WhdeVersion"
-s.version      = "1.0.3"
+s.version      = "1.1.0"
 s.summary      = "Objective-C检测版本"
 
 # This description is used to generate tags and improve search results.
