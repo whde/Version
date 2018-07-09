@@ -91,7 +91,7 @@ s.source       = { :git => "https://github.com/whde/Version.git", :tag => s.vers
 #  Not including the public_header_files will make all headers public.
 #
 
-s.source_files  = "Classes", "Version/Version/Version/*"
+s.source_files  = "Classes", "WhdeVersion/WhdeVersion/*"
 # s.exclude_files = "Classes/Exclude"
 
 # s.public_header_files = "Classes/**/*.h"

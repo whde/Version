@@ -44,9 +44,7 @@ static VersionManager *manager = nil;
 }
 
 /**
- *   showAlert 设置中主动触发版本更新，
- *  @param showAlert     YES-需要提示“已经是最新”
- *  @param callBackBlock 检查完毕后可能需要做的处理
+ *   checkVerSion 设置中主动触发版本更新，
  */
 - (void)checkVerSion{
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
