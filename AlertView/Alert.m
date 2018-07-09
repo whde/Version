@@ -215,7 +215,7 @@
  */
 - (void)setAlertStyle:(AlertStyle)alertStyle {
     _alertStyle = alertStyle;
-    void (^addKeybordNotification)()= ^(){
+    void (^addKeybordNotification)(void)= ^(){
         // 键盘通知
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillShow:) name:UIKeyboardWillShowNotification object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillHide:) name:UIKeyboardWillHideNotification object:nil];
@@ -452,9 +452,9 @@
     
     CGRect rect = [note.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
     [UIView animateWithDuration:[note.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue] animations:^{
-        CGRect viewRect = _alertView.frame;
+        CGRect viewRect = self->_alertView.frame;
         viewRect.origin.y = CGRectGetHeight(self.frame)-rect.size.height-viewRect.size.height;
-        _alertView.frame = viewRect;
+        self->_alertView.frame = viewRect;
     }completion:^(BOOL finished) {
     }];
 }
@@ -466,7 +466,7 @@
  */
 - (void)keyBoardWillHide:(NSNotification *)note{
     [UIView animateWithDuration:[note.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue] animations:^{
-        _alertView.center = self.center;
+        self->_alertView.center = self.center;
     }];
 }
 

@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F8467EF41CE02A0C00A5CEE9 /* Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = F8467EF21CE02A0C00A5CEE9 /* Alert.m */; };
-		F8467EF51CE02A0C00A5CEE9 /* s.png in Resources */ = {isa = PBXBuildFile; fileRef = F8467EF31CE02A0C00A5CEE9 /* s.png */; };
+		4CB1878D20F34D2500FB924D /* Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB1878A20F34D2500FB924D /* Alert.m */; };
+		4CB1878E20F34D2500FB924D /* s.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CB1878B20F34D2500FB924D /* s.png */; };
 		F8467EFB1CE02A1A00A5CEE9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F8467EF71CE02A1A00A5CEE9 /* Info.plist */; };
 		F8467EFC1CE02A1A00A5CEE9 /* VersionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F8467EF91CE02A1A00A5CEE9 /* VersionManager.m */; };
 		F8E0D2331C92F928005FC73E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8E0D2321C92F928005FC73E /* main.m */; };
@@ -33,9 +33,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F8467EF11CE02A0C00A5CEE9 /* Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alert.h; sourceTree = "<group>"; };
-		F8467EF21CE02A0C00A5CEE9 /* Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alert.m; sourceTree = "<group>"; };
-		F8467EF31CE02A0C00A5CEE9 /* s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s.png; sourceTree = "<group>"; };
+		4CB1878A20F34D2500FB924D /* Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alert.m; sourceTree = "<group>"; };
+		4CB1878B20F34D2500FB924D /* s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s.png; sourceTree = "<group>"; };
+		4CB1878C20F34D2500FB924D /* Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alert.h; sourceTree = "<group>"; };
 		F8467EF71CE02A1A00A5CEE9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8467EF81CE02A1A00A5CEE9 /* VersionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VersionManager.h; sourceTree = "<group>"; };
 		F8467EF91CE02A1A00A5CEE9 /* VersionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VersionManager.m; sourceTree = "<group>"; };
@@ -63,15 +63,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F8467EF01CE02A0C00A5CEE9 /* AlertView */ = {
+		4CB1878920F34D2500FB924D /* AlertView */ = {
 			isa = PBXGroup;
 			children = (
-				F8467EF11CE02A0C00A5CEE9 /* Alert.h */,
-				F8467EF21CE02A0C00A5CEE9 /* Alert.m */,
-				F8467EF31CE02A0C00A5CEE9 /* s.png */,
+				4CB1878A20F34D2500FB924D /* Alert.m */,
+				4CB1878B20F34D2500FB924D /* s.png */,
+				4CB1878C20F34D2500FB924D /* Alert.h */,
 			);
 			name = AlertView;
-			path = ../AlertView;
+			path = ../../AlertView;
 			sourceTree = "<group>";
 		};
 		F8467EF61CE02A1A00A5CEE9 /* WhdeVersion */ = {
@@ -81,6 +81,7 @@
 				F8467EF81CE02A1A00A5CEE9 /* VersionManager.h */,
 				F8467EF91CE02A1A00A5CEE9 /* VersionManager.m */,
 				F8467EFA1CE02A1A00A5CEE9 /* WhdeVersion.h */,
+				4CB1878920F34D2500FB924D /* AlertView */,
 			);
 			name = WhdeVersion;
 			path = ../WhdeVersion/WhdeVersion;
@@ -90,7 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				F8467EF61CE02A1A00A5CEE9 /* WhdeVersion */,
-				F8467EF01CE02A0C00A5CEE9 /* AlertView */,
 				F8E0D2301C92F928005FC73E /* Version */,
 				F8E0D22F1C92F928005FC73E /* Products */,
 			);
@@ -155,7 +155,7 @@
 		F8E0D2261C92F928005FC73E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = whde;
 				TargetAttributes = {
 					F8E0D22D1C92F928005FC73E = {
@@ -188,9 +188,9 @@
 			files = (
 				F8E0D2411C92F928005FC73E /* LaunchScreen.storyboard in Resources */,
 				F8E0D23E1C92F928005FC73E /* Assets.xcassets in Resources */,
+				4CB1878E20F34D2500FB924D /* s.png in Resources */,
 				F8E0D23C1C92F928005FC73E /* Main.storyboard in Resources */,
 				F8467EFB1CE02A1A00A5CEE9 /* Info.plist in Resources */,
-				F8467EF51CE02A0C00A5CEE9 /* s.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,9 +202,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8E0D2391C92F928005FC73E /* ViewController.m in Sources */,
+				4CB1878D20F34D2500FB924D /* Alert.m in Sources */,
 				F8E0D2361C92F928005FC73E /* AppDelegate.m in Sources */,
 				F8467EFC1CE02A1A00A5CEE9 /* VersionManager.m in Sources */,
-				F8467EF41CE02A0C00A5CEE9 /* Alert.m in Sources */,
 				F8E0D2331C92F928005FC73E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,13 +239,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -283,13 +293,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -323,7 +343,7 @@
 					"$(PROJECT_DIR)/Version",
 				);
 				INFOPLIST_FILE = Version/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ziyoubang.eCarryiPhone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -340,7 +360,7 @@
 					"$(PROJECT_DIR)/Version",
 				);
 				INFOPLIST_FILE = Version/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ziyoubang.eCarryiPhone;
 				PRODUCT_NAME = "$(TARGET_NAME)";

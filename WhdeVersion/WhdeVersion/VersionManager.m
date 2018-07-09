@@ -11,17 +11,6 @@
 #if  __has_include(<Alert.h>)
 #import "Alert.h"
 #endif
-#define weakify(...) \\
-    autoreleasepool {} \\
-    metamacro_foreach_cxt(rac_weakify_,, __weak, __VA_ARGS__)
-
-#define strongify(...) \\
-    try {} @finally {} \\
-    _Pragma("clang diagnostic push") \\
-    _Pragma("clang diagnostic ignored \\"-Wshadow\\"") \\
-    metamacro_foreach(rac_strongify_,, __VA_ARGS__) \\
-    _Pragma("clang diagnostic pop")
-
 #define IS_VAILABLE_IOS8  ([[[UIDevice currentDevice] systemVersion] intValue] >= 8)
 NSString * const VSERSION = @"Version";
 NSString * const VSERSIONMANAGER = @"VersionManager";
@@ -62,22 +51,22 @@ static VersionManager *manager = nil;
 - (void)checkVerSion{
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         NSDictionary *dic = [[NSUserDefaults standardUserDefaults] objectForKey:VSERSIONMANAGER];
-        versionManagerDic = [NSMutableDictionary dictionaryWithCapacity:0];
+        self->versionManagerDic = [NSMutableDictionary dictionaryWithCapacity:0];
         if (dic) {
-            [versionManagerDic addEntriesFromDictionary:dic];
+            [self->versionManagerDic addEntriesFromDictionary:dic];
         }
         NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
         NSString *appPackageName = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
         NSString *firstLaunchKey = [NSString stringWithFormat:@"VersionManage_%@" , appPackageName];
-        NSString *str = [versionManagerDic objectForKey:firstLaunchKey];
+        NSString *str = [self->versionManagerDic objectForKey:firstLaunchKey];
         if (![str boolValue]) {
             /*这个版本是第一次*/
             /*清除上一版本存储的信息*/
             /*第一次是NO*/
             /*第二次是YES*/
-            [versionManagerDic removeAllObjects];
-            [versionManagerDic setValue:@"YES" forKey:firstLaunchKey];
-            [[NSUserDefaults standardUserDefaults] setValue:versionManagerDic forKey:VSERSIONMANAGER];
+            [self->versionManagerDic removeAllObjects];
+            [self->versionManagerDic setValue:@"YES" forKey:firstLaunchKey];
+            [[NSUserDefaults standardUserDefaults] setValue:self->versionManagerDic forKey:VSERSIONMANAGER];
             [[NSUserDefaults standardUserDefaults] synchronize];
         }
         NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"http://itunes.apple.com/lookup?bundleId=%@",[infoDictionary objectForKey:@"CFBundleIdentifier"]]];
@@ -93,9 +82,9 @@ static VersionManager *manager = nil;
                 if ([infoArray isKindOfClass:[NSArray class]] && [infoArray count]>0) {
                     NSDictionary *releaseInfo = [infoArray objectAtIndex:0];
                     NSString *appstoreVersion = [releaseInfo objectForKey:@"version"];
-                    url_ = [releaseInfo objectForKey:@"trackViewUrl"];
-                    _appstore_ID = [NSString stringWithFormat:@"%@", [releaseInfo objectForKey:@"artistId"]];
-                    if ([[versionManagerDic valueForKey:VSERSION] isEqual:appstoreVersion]) {
+                    self->url_ = [releaseInfo objectForKey:@"trackViewUrl"];
+                    self->_appstore_ID = [NSString stringWithFormat:@"%@", [releaseInfo objectForKey:@"artistId"]];
+                    if ([[self->versionManagerDic valueForKey:VSERSION] isEqual:appstoreVersion]) {
                         /*记录下来的和appstoreVersion相比, 相同的表示已经检查过的版本,不需要在去提示*/
                         manager = nil;
                         return ;
@@ -109,8 +98,8 @@ static VersionManager *manager = nil;
                         if ([[appstoreVersionAry objectAtIndex:i] intValue]>[[currentVersionAry objectAtIndex:i] intValue]){
                             /*appstore版本有更新*/
                             /*记录下来版本号*/
-                            [versionManagerDic setObject:appstoreVersion forKey:VSERSION];
-                            [[NSUserDefaults standardUserDefaults] setValue:versionManagerDic forKey:VSERSIONMANAGER];
+                            [self->versionManagerDic setObject:appstoreVersion forKey:VSERSION];
+                            [[NSUserDefaults standardUserDefaults] setValue:self->versionManagerDic forKey:VSERSIONMANAGER];
                             [[NSUserDefaults standardUserDefaults] synchronize];
                             dispatch_async(dispatch_get_main_queue(), ^{
 #if __has_include(<Alert.h>)
@@ -118,14 +107,13 @@ static VersionManager *manager = nil;
                                 Alert *alert = [[Alert alloc] initWithTitle:@"有新版本更新" message:[NSString stringWithFormat:@"更新内容:\n%@", releaseInfo[@"releaseNotes"]] delegate:nil cancelButtonTitle:@"关闭" otherButtonTitles:@"更新", nil];
                                 [alert setContentAlignment:NSTextAlignmentLeft];
                                 [alert setLineSpacing:5];
-                                @weakify(self)
+                                __weak __typeof__(self) weakSelf = self;
                                 [alert setClickBlock:^(Alert *alertView, NSInteger buttonIndex) {
-                                    @strongify(self)
                                     if (buttonIndex == 0) {
                                         manager = nil;
                                     } else {
                                         /*更新*/
-                                        [self openAppWithIdentifier];
+                                        [weakSelf openAppWithIdentifier];
                                     }
                                 }];
                                 [alert show];
@@ -177,7 +165,7 @@ static VersionManager *manager = nil;
 - (void)openAppWithIdentifier{
     dispatch_async(dispatch_get_main_queue(), ^{
         SKStoreProductViewController *storeProductVC = [[SKStoreProductViewController alloc] init];
-        NSDictionary *dict = [NSDictionary dictionaryWithObject:_appstore_ID forKey:SKStoreProductParameterITunesItemIdentifier];
+        NSDictionary *dict = [NSDictionary dictionaryWithObject:self->_appstore_ID forKey:SKStoreProductParameterITunesItemIdentifier];
         storeProductVC.delegate = self;
         [storeProductVC loadProductWithParameters:dict completionBlock:^(BOOL result, NSError *error) {
             if (result) {
