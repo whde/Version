@@ -29,4 +29,6 @@ pod 'Alert', '~> 1.0.3'
    - Alert同时还支持Block形式
    - 支持横竖屏切换
 <p><p>
+   
 ![效果图](https://raw.githubusercontent.com/whde/Version/master/Version/Simulator%20Screen%20Shot%202016年3月15日%20上午11.09.25.png)
+
